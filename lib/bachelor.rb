@@ -3,7 +3,7 @@ def get_first_name_of_season_winner(data, season)
     if season_num == season
       cont_array.each do |cont_hash|
         if cont_hash.fetch("status") == "Winner"
-          return cont_hash.fetch("name")
+          return cont_hash.fetch("name").split(" ")[0].to_s
         end
       end
     end
