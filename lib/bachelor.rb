@@ -24,11 +24,12 @@ def count_contestants_by_hometown(data, hometown)
   counter = 0
   data.each do |season_num, cont_array|
     cont_array.each do |cont_hash|
-      if cont_hash.fetch("occupation") == occupation
-        return cont_hash.fetch("name")
+      if cont_hash.fetch("hometown") == hometown
+        counter += 1 
       end
     end
   end
+  counter
 end
 
 def get_occupation(data, hometown)
