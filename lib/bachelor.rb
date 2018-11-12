@@ -1,5 +1,13 @@
 def get_first_name_of_season_winner(data, season)
-  # code here
+  data.each do |season_num, cont_array|
+    if season_num == season
+      cont_array.each do |cont_hash|
+        if cont_hash.fetch("status") == Winner
+          return cont_hash.fetch("name")
+        end
+      end
+    end
+  end
 end
 
 def get_contestant_name(data, occupation)
