@@ -49,7 +49,7 @@ def get_average_age_for_season(data, season)
     if season_num == season
       cont_array.each do |cont_hash|
         cont_num += 1
-        age_sum += cont_hash.fetch("age").to_i
+        age_sum += cont_hash.fetch("age").to_f
       end
     end
   end
